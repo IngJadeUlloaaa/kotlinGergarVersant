@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GergarVersant</string>
+
+    <!--   welcome - activity main   -->
+    <string name="welcomeFirstActivity">Welcome to Gergar Versant</string>
+    <!--  developers  -->
+    <string name="authors">By: Ing Carlos Ulloa</string>
+    <!--  button title  -->
+    <string name="btnTitle">Get started</string>
 </resources>
