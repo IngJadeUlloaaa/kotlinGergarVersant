@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".MenuActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/childContainerMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--    gengar img    -->
+        <ImageView
+            android:id="@+id/gengarProfile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/gengar_profile" />
+
+        <!-- Search Box -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/search_box_style"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search" />
+
+
+        <!-- Button && Icon-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnGetOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@drawable/baseline_logout_24"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--  areas of improvement  -->
+    <TextView
+        android:id="@+id/areasOfImprovement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/readex"
+        android:text="@string/areasOfImprovement"
+        android:textColor="@color/areasOfImprovement"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/childContainerMenu"
+        tools:ignore="NotSibling" />
+
+    <!--  carrousel  -->
+    <ViewFlipper
+        android:id="@+id/carrousel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:autoStart="true"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/areasOfImprovement">
+
+        <!--    orientation    -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/auditiveContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- auditive comprehension -->
+            <ImageView
+                android:id="@+id/auditiveComprehension"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/oral_expression"
+                tools:ignore="MissingConstraints" />
+
+            <!-- title -->
+            <TextView
+                android:id="@+id/auditiveT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/readex"
+                android:text="@string/auditiveTitle"
+                android:textColor="@color/titleCarousel"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/auditiveContainer"
+                app:layout_constraintStart_toStartOf="@id/auditiveContainer"
+                app:layout_constraintTop_toBottomOf="@id/auditiveComprehension"
+                tools:ignore="MissingConstraints" />
+
+            <!-- description -->
+            <TextView
+                android:id="@+id/auditiveD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/readex"
+                android:text="@string/auditiveDescription"
+                android:textColor="@color/descriptionCarousel"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/auditiveContainer"
+                app:layout_constraintStart_toStartOf="@id/auditiveContainer"
+                app:layout_constraintTop_toBottomOf="@id/auditiveT"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--    oral expression    -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/oralContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/auditiveContainer">
+
+            <!-- oral expression -->
+            <ImageView
+                android:id="@+id/oralExpression"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/auditive_comprehension"
+                tools:ignore="MissingConstraints" />
+
+            <!-- title -->
+            <TextView
+                android:id="@+id/oralT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/readex"
+                android:text="@string/auditiveTitle"
+                android:textColor="@color/titleCarousel"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/oralContainer"
+                app:layout_constraintStart_toStartOf="@id/oralContainer"
+                app:layout_constraintTop_toBottomOf="@id/oralExpression"
+                tools:ignore="MissingConstraints" />
+
+            <!-- description -->
+            <TextView
+                android:id="@+id/descriptionD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/readex"
+                android:text="@string/auditiveDescription"
+                android:textColor="@color/descriptionCarousel"
+                app:layout_constraintEnd_toEndOf="@id/oralContainer"
+                app:layout_constraintStart_toStartOf="@id/oralContainer"
+                app:layout_constraintTop_toBottomOf="@id/oralT"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ViewFlipper>
+
+    <!--    american accent    -->
+    <LinearLayout
+        android:id="@+id/americanAccentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/american_accent_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carrousel">
+
+        <!-- information box -->
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/readex"
+                android:text="@string/americanTitle"
+                android:textColor="@color/americanT"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- description -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/readex"
+                android:text="@string/americanDescription"
+                android:textColor="@color/americanD"
+                android:textSize="13sp" />
+
+            <!--     get in btn       -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/americanBtnGetIn"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/american_btn"
+                android:fontFamily="@font/readex"
+                android:text="@string/americanBtn"
+                android:textAllCaps="false"
+                android:textColor="@color/americanT"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!--    img container    -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="18dp"
+            android:layout_weight="1">
+
+            <!-- youtube img -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                android:src="@drawable/yt_logo" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--  my task  -->
+    <TextView
+        android:id="@+id/myTaskT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/readex"
+        android:text="@string/myTask"
+        android:textColor="@color/myTasks"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/americanAccentContainer" />
+
+    <!--  task container  -->
+    <LinearLayout
+        android:id="@+id/taskContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myTaskT">
+
+        <!--    grammar container    -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/grammar_container"
+            android:orientation="horizontal">
+
+            <!--      grammar      -->
+            <View
+                android:layout_width="90dp"
+                android:layout_height="65dp"
+                android:background="@drawable/grammar_box" />
+
+            <!-- information container -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="3dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <!--     grammar title       -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/readex_semi"
+                    android:text="@string/grammarTitle"
+                    android:textColor="@color/grammarT"
+                    android:textSize="18sp" />
+
+                <!--     grammar title       -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/readex"
+                    android:text="@string/grammarDescription"
+                    android:textColor="@color/grammarD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--     icn container     -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="end">
+                <!--  arrow icon  -->
+                <ImageView
+                    android:id="@+id/icnGrammar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/arrow_grammar" />
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--    articles container    -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/grammar_container"
+            android:orientation="horizontal">
+
+            <!--      article      -->
+            <View
+                android:layout_width="90dp"
+                android:layout_height="65dp"
+                android:background="@drawable/articles_box" />
+
+            <!-- information container -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="3dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <!--     grammar title       -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/readex_semi"
+                    android:text="@string/articlesTitle"
+                    android:textColor="@color/grammarT"
+                    android:textSize="18sp" />
+
+                <!--     grammar title       -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/readex"
+                    android:text="@string/grammarDescription"
+                    android:textColor="@color/grammarD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--     icn container     -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="end">
+                <!--  arrow icon  -->
+                <ImageView
+                    android:id="@+id/icnArticles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/articles_icn" />
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--    prepositions container    -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/grammar_container"
+            android:orientation="horizontal">
+
+            <!--      article      -->
+            <View
+                android:layout_width="90dp"
+                android:layout_height="65dp"
+                android:background="@drawable/preposition_box" />
+
+            <!-- information container -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="3dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <!--     grammar title       -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/readex_semi"
+                    android:text="@string/prepositionsTitle"
+                    android:textColor="@color/grammarT"
+                    android:textSize="18sp" />
+
+                <!--     grammar title       -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-8dp"
+                    android:fontFamily="@font/readex"
+                    android:text="@string/prepositionsDescription"
+                    android:textColor="@color/grammarD"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--     icn container     -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="end">
+                <!--  arrow icon  -->
+                <ImageView
+                    android:id="@+id/icnPrepositions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/preposition_icn" />
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

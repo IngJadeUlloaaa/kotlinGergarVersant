@@ -7,4 +7,34 @@
     <string name="authors">By: Ing Carlos Ulloa</string>
     <!--  button title  -->
     <string name="btnTitle">Get started</string>
+
+    <!--  Areas of Improvement  -->
+    <string name="areasOfImprovement">Areas of Improvement</string>
+
+    <!--  title and description auditive comprehension  -->
+    <string name="auditiveTitle">Auditive Comprehension</string>
+    <string name="oralTitle">Oral Expression</string>
+    <string name="auditiveDescription">• 5min - Listening</string>
+
+    <!--  american accent container  -->
+    <string name="americanTitle">American Accent</string>
+    <string name="americanDescription">• More Videos</string>
+    <string name="americanBtn">Get in</string>
+
+    <!--  my task  -->
+    <string name="myTask">My Tasks</string>
+    <!--  grammar title  -->
+    <string name="grammarTitle">Grammar</string>
+    <!--  grammar description  -->
+    <string name="grammarDescription">Important</string>
+
+    <!--  articles title  -->
+    <string name="articlesTitle">Articles</string>
+    <!--  articles description  -->
+    <string name="articlesDescription">Important</string>
+
+    <!--  prepositions title  -->
+    <string name="prepositionsTitle">Prepositions</string>
+    <!--  prepositions description  -->
+    <string name="prepositionsDescription">Important</string>
 </resources>

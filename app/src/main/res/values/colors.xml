@@ -11,4 +11,29 @@
 
     <!--  get started title button color  -->
     <color name="getStartedTitleBtn">#FFFFFFFF</color>
+
+    <!--  areas of improvement  -->
+    <color name="areasOfImprovement">#FF000000</color>
+
+    <!--  title and description carousel  -->
+    <color name="titleCarousel">#FF000000</color>
+    <color name="descriptionCarousel">#808080</color>
+
+    <!--  american accent container  -->
+    <color name="americanT">#FF000000</color>
+    <color name="americanD">#808080</color>
+    <color name="americanBtn">#FFFFFFFF</color>
+
+    <!--  my tasks  -->
+    <color name="myTasks">#FF000000</color>
+
+    <!--  my tasks container  -->
+    <color name="myTaskContainer">#FFFFFFFF</color>
+    <color name="myTaskBorderContainer">#FFFFFFFF</color>
+
+    <!--  grammar title  -->1
+    <color name="grammarT">#8C000000</color>
+    <!--  grammar description  -->
+    <color name="grammarD">#8C000000</color>
+
 </resources>
