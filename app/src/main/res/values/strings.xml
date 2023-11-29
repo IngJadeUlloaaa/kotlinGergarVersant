@@ -37,4 +37,9 @@
     <string name="prepositionsTitle">Prepositions</string>
     <!--  prepositions description  -->
     <string name="prepositionsDescription">Important</string>
+
+    <!--  btn menu  -->
+    <string name="btnSearch"> </string>
+    <string name="btnHome"> </string>
+    <string name="btnBack"> </string>
 </resources>

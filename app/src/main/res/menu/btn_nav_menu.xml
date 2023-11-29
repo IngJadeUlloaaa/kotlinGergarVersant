@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  search btn  -->
+    <item
+        android:id="@+id/searchBtn"
+        android:icon="@drawable/search_icn"
+        android:title="@string/btnSearch" />
+
+    <!--  home btn  -->
+    <item
+        android:id="@+id/homeBtn"
+        android:icon="@drawable/home_icn"
+        android:title="@string/btnHome" />
+
+    <!--  back btn  -->
+    <item
+        android:id="@+id/backBtn"
+        android:icon="@drawable/back_icn"
+        android:title="@string/btnBack" />
+</menu>

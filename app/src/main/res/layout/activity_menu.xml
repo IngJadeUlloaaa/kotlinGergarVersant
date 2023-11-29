@@ -7,6 +7,7 @@
     android:background="@drawable/app_background"
     tools:context=".MenuActivity">
 
+    <!--  top container  -->
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/childContainerMenu"
         android:layout_width="wrap_content"
@@ -56,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/readex"
         android:text="@string/areasOfImprovement"
         android:textColor="@color/areasOfImprovement"
@@ -70,6 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:autoStart="true"
         android:inAnimation="@android:anim/slide_in_left"
         android:outAnimation="@android:anim/slide_out_right"
@@ -450,4 +453,19 @@
             </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
+
+    <!-- btn navigation's bar  -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNavigationBarHome"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:itemIconSize="23.5dp"
+        app:itemIconTint="@color/icnColorBtnNav"
+        android:background="@drawable/nav_btn_container"
+        app:itemPaddingTop="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/btn_nav_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,4 +36,9 @@
     <!--  grammar description  -->
     <color name="grammarD">#8C000000</color>
 
+    <!--  color container  -->
+    <color name="backAllBtn">#FFFFFFFF</color>
+    <!--  btn nav   -->
+    <color name="icnColorBtnNav">#FF000000</color>
+
 </resources>
