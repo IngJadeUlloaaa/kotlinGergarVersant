@@ -259,6 +259,22 @@
         app:layout_constraintTop_toBottomOf="@id/americanAccentContainer" />
 
     <!--  task container  -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNavigationBarHome"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/nav_btn_container"
+        app:itemIconSize="23.5dp"
+        app:itemIconTint="@color/icnColorBtnNav"
+        app:itemPaddingTop="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/btn_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <!-- btn navigation's bar  -->
     <LinearLayout
         android:id="@+id/taskContainer"
         android:layout_width="match_parent"
@@ -327,6 +343,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="40dp"
+                    android:paddingStart="6dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="6dp"
                     android:src="@drawable/arrow_grammar" />
             </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -388,6 +408,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="40dp"
+                    android:paddingStart="6dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="6dp"
                     android:src="@drawable/articles_icn" />
             </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -449,23 +473,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="40dp"
+                    android:paddingStart="6dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="6dp"
                     android:src="@drawable/preposition_icn" />
             </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
-
-    <!-- btn navigation's bar  -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btnNavigationBarHome"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        app:itemIconSize="23.5dp"
-        app:itemIconTint="@color/icnColorBtnNav"
-        android:background="@drawable/nav_btn_container"
-        app:itemPaddingTop="31dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/btn_nav_menu">
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

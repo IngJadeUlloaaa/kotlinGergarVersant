@@ -41,4 +41,24 @@
     <!--  btn nav   -->
     <color name="icnColorBtnNav">#FF000000</color>
 
+    <!--  score container   -->
+    <color name="scoreContainerColor">#801400FF</color>
+    <color name="scoreColor">#801400FF</color>
+
+    <!--  score container   -->
+    <color name="backScoreInformationContainer">#4DFFFFFF</color>
+
+    <!--  title Question Color  -->
+    <color name="titleQuestionColor">#FF000000</color>
+    <!--  correct color score -->
+    <color name="correctColorScore">#24FF00</color>
+    <!--  Incorrect color score -->
+    <color name="incorrectColorScore">#FF0000</color>
+
+    <!--  Answer Button-->
+    <color name="answerButton">#4DFFFFFF</color>
+    <color name="colorTextButton">#FF000000</color>
+
+
+
 </resources>

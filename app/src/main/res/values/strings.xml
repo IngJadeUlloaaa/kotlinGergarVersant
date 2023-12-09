@@ -4,9 +4,10 @@
     <!--   welcome - activity main   -->
     <string name="welcomeFirstActivity">Welcome to Gergar Versant</string>
     <!--  developers  -->
-    <string name="authors">By: Ing Carlos Ulloa</string>
+    <string name="authors">By: Eng Carlos Ulloa\n Jonathan Garcia</string>
     <!--  button title  -->
     <string name="btnTitle">Get started</string>
+
 
     <!--  Areas of Improvement  -->
     <string name="areasOfImprovement">Areas of Improvement</string>
@@ -42,4 +43,21 @@
     <string name="btnSearch"> </string>
     <string name="btnHome"> </string>
     <string name="btnBack"> </string>
+
+    <!--  score container  -->
+    <string name="scoreContainer">%d</string>
+
+    <!--  score container  -->
+    <string name="scoreCorrect">00</string>
+    <!--  score container  -->
+    <string name="scoreIncorrect">00</string>
+    <!--  first question -->
+    <string name="titleQuestion">How many students in your class\n __ for korea?</string>
+
+    <!--  button answer -->
+    <string name="buttonAnswerCome">come</string>
+    <string name="buttonAnswerComes">comes</string>
+    <string name="buttonAnswerAreComing">are coming</string>
+    <string name="buttonAnswerCame">came</string>
+
 </resources>
