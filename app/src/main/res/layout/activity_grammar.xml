@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".GrammarActivity">
+
+    <!--  top container  -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/childContainerMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--    gengar img    -->
+        <ImageView
+            android:id="@+id/gengarProfile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/gengar_profile" />
+
+        <!-- Search Box -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/search_box_style"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search" />
+
+        <!-- Button && Icon-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnGetOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@drawable/question"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- score container -->
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/back_score_container"
+        android:fontFamily="@font/readex"
+        android:gravity="center"
+        android:text="@string/scoreContainer"
+        android:textColor="@color/scoreColor"
+        android:textSize="62sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/childContainerMenu"
+        tools:ignore="MissingConstraints,NotSibling" />
+
+    <!-- score information container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/scoreInformationContainer"
+        android:layout_width="373dp"
+        android:layout_height="182dp"
+        android:background="@color/backScoreInformationContainer"
+        app:cardCornerRadius="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score"
+        tools:ignore="MissingConstraints">
+
+        <!-- container contador  -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <!--Textview score correct -->
+            <TextView
+                android:id="@+id/summaryCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/scoreCorrect" />
+
+            <!--view color correct -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="10dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/score_color_correct" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--container cont incorrect -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--view color incorrect -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/score_color_incorrect" />
+
+
+            <!-- Texview score incorrect -->
+            <TextView
+                android:id="@+id/summaryIncorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="13dp"
+                android:text="@string/scoreIncorrect" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- first question-->
+        <TextView
+            android:id="@+id/questionQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/readex"
+            android:gravity="center"
+            android:text="@string/titleQuestion"
+            android:textColor="@color/titleQuestionColor"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!--container buttons request -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreInformationContainer"
+        android:layout_marginTop="20dp">
+
+        <!--button come -->
+        <Button
+            android:id="@+id/ansA"
+            android:layout_width="373dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/readex"
+            android:textColor="@color/colorTextButton"
+            android:textSize="20sp"
+            android:background="@drawable/back_answer_button"
+            android:text="@string/buttonAnswerCome"/>
+
+        <!--button comes -->
+        <Button
+            android:id="@+id/ansB"
+            android:layout_width="373dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/readex"
+            android:textColor="@color/colorTextButton"
+            android:textSize="20sp"
+            android:background="@drawable/back_answer_button"
+            android:text="@string/buttonAnswerComes"/>
+
+        <!--button are coming -->
+        <Button
+            android:id="@+id/ansC"
+            android:layout_width="373dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/readex"
+            android:textColor="@color/colorTextButton"
+            android:textSize="20sp"
+            android:background="@drawable/back_answer_button"
+            android:text="@string/buttonAnswerAreComing"/>
+
+        <!--button came -->
+        <Button
+            android:id="@+id/ansD"
+            android:layout_width="373dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/readex"
+            android:textColor="@color/colorTextButton"
+            android:textSize="20sp"
+            android:background="@drawable/back_answer_button"
+            android:text="@string/buttonAnswerCame"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--  nav button -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNavigationBarHome"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/nav_btn_container"
+        app:itemIconSize="23.5dp"
+        app:itemIconTint="@color/icnColorBtnNav"
+        app:itemPaddingTop="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/btn_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
