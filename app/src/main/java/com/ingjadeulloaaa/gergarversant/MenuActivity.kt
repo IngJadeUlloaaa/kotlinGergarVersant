@@ -15,7 +15,20 @@ class MenuActivity : AppCompatActivity() {
         icnGrammar.setOnClickListener {
             navigateToGrammar()
         }
+
+        // auditive comprehension img
+        val auditiveComprehension = findViewById<ImageView>(R.id.auditiveComprehension)
+        auditiveComprehension.setOnClickListener {
+            navigateToAuditiveComprehension()
+        }
+
     }
+
+    private fun navigateToAuditiveComprehension() {
+        val intent = Intent(this, AuditiveComprehensionActivity::class.java)
+        startActivity(intent)
+    }
+
 
     private fun navigateToGrammar() {
         val intent = Intent(this, GrammarActivity::class.java)

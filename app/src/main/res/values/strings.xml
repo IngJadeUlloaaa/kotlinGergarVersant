@@ -60,4 +60,23 @@
     <string name="buttonAnswerAreComing">are coming</string>
     <string name="buttonAnswerCame">came</string>
 
+    <!--  auditive comprehension title  -->
+    <string name="auditiveComprehensionTitle">Auditive Comprehension</string>
+    <!--  close X  -->
+    <string name="close">Close</string>
+    <!--  audio playback   -->
+    <string name="audioPlayBack">Audio Playback</string>
+    <!--  play   -->
+    <string name="playBtn">Play Audio</string>
+    <!--  restart   -->
+    <string name="restartText">Restart</string>
+    <!--  continue  -->
+    <string name="continueText">Continue</string>
+    <!--  restart all btn  -->
+    <string name="restartAllBtn">Restart All</string>
+    <!--  histories  -->
+    <string name="initial_message">First History: Sushil is a marketing manager, he mailed to the employees about the office culture. The employee who go last in office should switch off the fan and light, also check anybody other in the office, if somebody is there inform same to them.</string>
+    <string name="second_message">Second History: The train pulled away just after Todd stepped onto it. He was traveling to Chicago for a business meeting. The meeting was on Thursday and he wanted to explore the city for a few days before th meeting. He pulled out his travel map and started to make plans.</string>
+    <string name="third_message">Thirst History: Lexie jumped into the wave and was immediately immersed in the water. She stood up and came out of the water. "I love the water, I love the waves and I love the sand," she said, her family was visiting the beach for 1 whole week and this was their first day.</string>
+
 </resources>

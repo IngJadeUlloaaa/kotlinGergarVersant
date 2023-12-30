@@ -1,0 +1,89 @@
+<!-- res/layout/audio_modal.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/auditive_comprehension_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="30dp">
+
+    <ImageButton
+        android:id="@+id/exitBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/close"
+        android:src="@drawable/times" />
+
+    <!--  audio playback title  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/readex"
+        android:text="@string/audioPlayBack"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--  play audio btn  -->
+    <Button
+        android:id="@+id/playAudioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/reem"
+        android:text="@string/playBtn"
+        android:textSize="17sp" />
+
+    <!--  container  -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/restartTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/readex"
+            android:text="@string/restartText"
+            android:textColor="@color/restartColor"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/continueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="3dp"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawablePadding="3dp"
+            android:fontFamily="@font/readex"
+            android:text="@string/continueText"
+            android:textColor="@color/restartColor"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/restartAllButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="3dp"
+            android:drawableEnd="@drawable/repeat"
+            android:drawablePadding="3dp"
+            android:fontFamily="@font/readex"
+            android:text="@string/restartAllBtn"
+            android:textColor="@color/restartColor"
+            android:textSize="17sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

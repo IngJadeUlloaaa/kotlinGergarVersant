@@ -59,6 +59,12 @@
     <color name="answerButton">#4DFFFFFF</color>
     <color name="colorTextButton">#FF000000</color>
 
+    <!-- Auditive Comprehension alert -->
+    <color name="auditiveComprehensionAlert">#00FFFFFF</color>
+    <!--  Restart Color  -->
+    <color name="restartColor">#808080</color>FF00C7
+    <!--  Play Color Button  -->
+    <color name="playColorBtnAlert">#FF00C7</color>
 
 
 </resources>

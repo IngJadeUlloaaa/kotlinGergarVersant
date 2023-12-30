@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_auditive_comprehension"
+    tools:context=".AuditiveComprehensionActivity">
+
+    <!--  top container  -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/childContainerMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--    gengar img    -->
+        <ImageView
+            android:id="@+id/gengarProfile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/gengar_profile" />
+
+        <!-- Search Box -->
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/search_box_style"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search" />
+
+        <!-- Button && Icon-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnGetOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@drawable/baseline_logout_24"
+            tools:ignore="MissingConstraints" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--  Audio Graph Container  -->
+    <LinearLayout
+        android:id="@+id/audioGraphContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/childContainerMenu"
+        tools:ignore="MissingConstraints">
+
+        <!--  Audio Graph   -->
+        <com.ingjadeulloaaa.gergarversant.VoiceGraphView
+            android:id="@+id/voiceGraph"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            tools:ignore="MissingClass,MissingConstraints" />
+
+    </LinearLayout>
+
+    <!--  Chronometer  -->
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/readex"
+        android:text="00:00:00"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audioGraphContainer"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Auditive Comprehension Text  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/readex"
+        android:text="@string/auditiveComprehensionTitle"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerTextView"
+        tools:ignore="MissingConstraints" />
+
+    <!--  Play Recorder & Stop Recorder Buttons  -->
+    <ImageButton
+        android:id="@+id/startRecordingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/play_recorder"
+        app:layout_constraintBottom_toTopOf="@id/btnNavigationBarHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/stopRecordingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/stop_recorder"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnNavigationBarHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--  task container  -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNavigationBarHome"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/nav_btn_container"
+        app:itemIconSize="23.5dp"
+        app:itemIconTint="@color/icnColorBtnNav"
+        app:itemPaddingTop="31dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/btn_nav_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
